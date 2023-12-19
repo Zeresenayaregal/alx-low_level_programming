@@ -14,7 +14,7 @@ int main(void)
 	int sum = 0;
 	int lim = 1024;
 
-	while (i ==0)
+	while (i == 0)
 	{
 		if (m3 < lim)
 		{
