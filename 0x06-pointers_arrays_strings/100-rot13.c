@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * rot13 -  a   function that encodes a string using rot13.
- * @s: An input string to encode using rot13
- * Return: An encode string
+ * rot13 -  encoder rot13
+ * @s: pointer to a string params
+ * Return: *s
  */
 
 char *rot13(char *s)
