@@ -1,28 +1,25 @@
-#ifndef _VARIADIC_FUNCTIONS_H_
-#define _VARIADIC_FUNCTIONS_H_
+#ifndef VARIADIC_FUNCTIONS_H
+#define VARIADIC_FUNCTIONS_H
 
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
+
 /**
- * struct p - checker struct
- * @p: possibility
- * @f: Function to be used
- */
-typedef struct p
+ * struct print - A new struct type defining our print
+ *
+ * @symbol: Our symbol representing the data type
+ * @print_func: a function pointer that prints
+ *             a data type according to the symbol
+*/
+typedef struct print
 {
-  char *p;
-  void (*f)(va_list);
-} checker;
+	char *symbol;
+	void (*print_func)(va_list arg);
+} func_printer;
 
-void print_c(va_list);
-void print_i(va_list);
-void print_f(va_list);
-void print_s(va_list);
-
-#endif
-
+#endif /* VARIADIC_FUNCTIONS_H */
